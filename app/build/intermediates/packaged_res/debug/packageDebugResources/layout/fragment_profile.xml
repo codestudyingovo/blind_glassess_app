@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 用户信息区域（图像和名字竖直排列） -->
+    <LinearLayout
+        android:id="@+id/userInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+        <!-- 用户图像 -->
+        <ImageView
+            android:id="@+id/userImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/user_image" />
+
+        <!-- 用户名字 -->
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="某用户"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- 中间的消息与设备区域（左右排列） -->
+    <LinearLayout
+        android:id="@+id/messageDeviceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/userInfoLayout"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <!-- 消息图标和文字 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/messageIcon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_message" />
+
+            <TextView
+                android:id="@+id/messageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消息"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- 设备图标和文字 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/deviceIcon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_device" />
+
+            <TextView
+                android:id="@+id/deviceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设备"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 功能服务列表区域（文字列表） -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/servicesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/messageDeviceLayout"
+        android:scrollbars="vertical"
+        android:padding="16dp" />
+
+</RelativeLayout>

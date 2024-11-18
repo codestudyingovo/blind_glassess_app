@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <!-- 左边是用户图像 -->
+    <ImageView
+        android:id="@+id/contactImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/user_image"
+        android:layout_marginEnd="16dp" />
+
+    <!-- 右边是昵称和姓名 -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/contactNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昵称"
+            android:textSize="16sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/contactRealName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名"
+            android:textSize="14sp"
+            android:textColor="#555555" />
+    </LinearLayout>
+
+</LinearLayout>
